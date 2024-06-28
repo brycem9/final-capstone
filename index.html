@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Global CSS (CSS rules you want applied to all pages) -->
+    <link rel="stylesheet" href="./global.css" />
+
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="./landing.css" />
+
+    <title>Login to the Microblog Network!</title>
+
+    <!-- Run BEFORE page is finished loading (before window.onload - don't add the `defer` attribute): -->
+    <script src="./auth.js"></script>
+    <script>
+      if (isLoggedIn() === true) window.location.replace("/posts");
+    </script>
+    <script src="./registration/register.js"></script>
+  </head>
+  <body>
+    <figure>
+      <video muted autoplay loop src="./assets/amivideo.mp4"></video>
+    </figure>
+
+    <main>
+      <div class="login--container">
+        <div class="logo--container">
+          <img class="logo" src="./assets/ami logo.png" alt="" />
+        </div>
+        <form id="login">
+          <div>
+            <input
+            required
+              placeholder="Username"
+              type="text"
+              id="username"
+              minlength="3"
+            />
+          </div>
+
+          <div>
+            <input
+              required
+              placeholder="Password"
+              type="password"
+              id="password"
+              minlength="6"
+            />
+          </div>
+
+          <button id="loginButton" type="submit">Login</button>
+          <p class="reg--link">Don't have an account? <span onclick="redirectToRegister()">Register here</span> </p>
+         
+        </form>
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- Page-specific code -->
+    <script src="./landing.js"></script>
+  </body>
+</html>

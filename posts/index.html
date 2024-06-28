@@ -1,0 +1,148 @@
+<!-- POSTS page -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Global CSS (CSS rules you want applied to all pages) -->
+    <link rel="stylesheet" href="../global.css" />
+
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="./posts.css" />
+
+    <title>/POSTS</title>
+
+    <!-- Run BEFORE page is finished loading (before window.onload): -->
+    <script src="../profile/profile.js"></script>
+    <script src="../auth.js"></script>
+    <script>
+      if (isLoggedIn() === false) window.location.replace("/");
+    </script>
+  </head>
+  <body>
+    <nav>
+      <div class="search--elements">
+        <img class="logo" src="../assets/ami logo.png" alt="" />
+        <div class="search--container">
+          <img
+            class="search"
+            src="../assets/search_24dp_FILL0_wght300_GRAD0_opsz24.png"
+            alt=""
+          />
+          <input class="search--input" placeholder="search ami" type="text" />
+        </div>
+      </div>
+      <div class="user--wrapper">
+        <ul class="user--buttons">
+
+          <li class="user--button">
+            <img class="user--logo" src="../assets/home_24dp_FILL1_wght300_GRAD0_opsz24.png" alt="">
+            Home
+          </li>
+         
+          <li class="user--button">
+            <img class="user--logo" src="../assets/diversity_3_24dp_FILL1_wght300_GRAD0_opsz24.png" alt="">
+            Friends
+          </li>
+          <li class="user--button">
+            <img class="user--logo" src="../assets/notifications_24dp_FILL1_wght300_GRAD0_opsz24.png" alt="">
+            Notifications
+          </li>
+          <li class="user--button">
+            <img onclick="redirectToProfile()" class="user__pfp--icon" src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7e/b0/35/7eb0353b-8f25-32dd-5f5e-71d9ed700247/00602577524004.rgb.jpg/316x316bb.webp" alt="">
+            Me
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+    <!-- <button onclick="logout()">Logout</button> -->
+     
+    <main class="main--content">
+      <div class="sidebar">
+        <div class="sidebar--container">
+          <ul>
+            <li class="sidebar--item">Bryce M.</li>
+            <li class="sidebar--item"><img class="sidebar--image" src="../assets/8707326_profile_user_man_boy_avatar_icon.png" alt=""> Friends</li>
+            <li class="sidebar--item"><img class="sidebar--image" src="../assets/8721611_favorite_save_bookmark_icon.png" alt="">Saved</li>
+            <li class="sidebar--item"><img class="sidebar--image" src="../assets/11677562_3_chat_message_bubble_talk_icon.png" alt="">Groups</li>
+            <li class="sidebar--item"><img class="sidebar--image" src="../assets/11677534_.png_calendar_month_schedule_format_icon.png" alt="">Events</li>
+            <li class="sidebar--item"><img class="sidebar--image" src="../assets/8712568_mail_email_message_letter_envelope_icon.png" alt="">Messaging</li>
+            <li onclick="logout()" class="sidebar--item">Logout</li>
+          </ul>
+        </div>
+      </div>
+      <div class="create__post--wrapper">
+        <div class="create__post--container">
+        <div class="create--post">
+          <img class="profile--picture" src="../assets/default-avatar-icon-of-social-media-user-vector.jpg" alt="">
+          <input id="postInput" placeholder="what's on your mind?" class="post--text" type="text">
+          <button id="postButton" class="post--submit">Post</button>
+          <div class="post__button--container">
+            <ul class="post--buttons">
+              <li class="post--button live">LIVE</li>
+              <li class="post--button"> <img class="interaction--img" src="../assets/picture_image_icon.png" alt="">Media</li>
+              <li class="post--button"><img class="interaction--img" src="../assets/star_png_icon.png" alt="">Feeling...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="messages" class="posts">
+       
+        
+      </div>
+      </div>
+      
+      <div class="news">
+        <div class="news--container">
+          <div></div>
+          <h1 class="news--header">Trending</h1>
+          <h5 class="topics--header">Hot Topics</h5>
+          <ul>
+            <li class="news--item">
+              AI Breakthroughs in Artificial Intelligence
+              <span class="topic__post--count">1.7k posts</span>
+            </li>
+            <li class="news--item">Sustainable Fashion Style Trends
+              <span class="topic__post--count">2.4k posts</span>
+            </li>
+            <li class="news--item">Major Moves in the Cryptocurrency Market
+              <span class="topic__post--count">1.5k posts</span>
+            </li>
+            <li class="news--item">
+              Fitness Hacks Quick Workouts for Busy Schedules
+              <span class="topic__post--count">2.2k posts</span>
+            </li>
+            <li class="news--item">
+              Travel on a Budget Affordable Adventure Destinations
+              <span class="topic__post--count">1k posts</span>
+            </li>
+            <li class="news--item">
+              Mental Health Matters Tips for Managing Stress and Anxiety
+              <span class="topic__post--count">3.4k posts</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+
+    <!-- Page-specific code -->
+    <script src="./posts.js"></script>
+  </body>
+</html>

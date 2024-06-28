@@ -1,0 +1,80 @@
+/* Landing Page CSS */
+* {
+    overflow: hidden;
+}
+
+input {
+    border: none;
+    background-color: #f0f2f5;
+    border-radius: 8px;
+    margin-top: 16px;
+    padding: 8px;
+    outline: none;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#loginButton {
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    margin-top: 16px;
+    background-color: #4db5fa;
+    color: white;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+
+}
+
+.login--container{
+    background-color: white;
+    height: 400px;
+    width: 300px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px lightgray;
+    box-shadow: rgba(16, 17, 19, 0.305) 0px 20px 30px -10px;
+}
+
+span {
+    color: #038fec;
+    cursor: pointer;
+}
+
+.reg--link {
+    margin-top: 24px;
+    font-size: 14px
+}
+
+figure {
+    width: 100vw;
+    height: 400vh;
+    position: absolute;
+    z-index: -1;
+    top: -660px;
+}
+
+video {
+    width: 100%;
+    height: 90%;
+    transform: scale(1.1);
+    filter: blur(8px) grayscale(90%);
+}
+
+.logo {
+    width: 140px;
+    filter: invert();
+}

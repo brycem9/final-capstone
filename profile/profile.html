@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../posts/posts.css" />
+    <link rel="stylesheet" href="./profile.css" />
+    <script src="./profile.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <div class="search--elements">
+        <img class="logo" src="../assets/ami logo.png" alt="" />
+        <div class="search--container">
+          <img
+            class="search"
+            src="../assets/search_24dp_FILL0_wght300_GRAD0_opsz24.png"
+            alt=""
+          />
+          <input class="search--input" placeholder="search ami" type="text" />
+        </div>
+      </div>
+      <div class="user--wrapper">
+        <ul class="user--buttons">
+          <li onclick="redirectToPosts()" class="user--button">
+            <img
+              class="user--logo"
+              src="../assets/home_24dp_FILL1_wght300_GRAD0_opsz24.png"
+              alt=""
+            />
+            Home
+          </li>
+
+          <li class="user--button">
+            <img
+              class="user--logo"
+              src="../assets/diversity_3_24dp_FILL1_wght300_GRAD0_opsz24.png"
+              alt=""
+            />
+            Friends
+          </li>
+          <li class="user--button">
+            <img
+              class="user--logo"
+              src="../assets/notifications_24dp_FILL1_wght300_GRAD0_opsz24.png"
+              alt=""
+            />
+            Notifications
+          </li>
+          <li class="user--button">
+            <img
+              onclick="redirectToProfile()"
+              class="user--logo"
+              src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7e/b0/35/7eb0353b-8f25-32dd-5f5e-71d9ed700247/00602577524004.rgb.jpg/316x316bb.webp"
+              alt=""
+            />
+            Me
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="profile--container">
+        <figure class="banner">
+          <img
+            class="profile--pfp"
+            src="../assets/default-avatar-icon-of-social-media-user-vector.jpg"
+            alt=""
+          />
+        </figure>
+        <div class="profile--info">
+          <h5 class="profile--name">Bryce M.</h5>
+          <ul class="profile--links">
+            <li class="profile--link">About</li>
+            <li class="profile--link">Friends</li>
+            <li class="profile--link">Photos</li>
+            <li class="profile--link">Videos</li>
+          </ul>
+          <div class="post--wrapper">
+            <div class="create--post">
+              <img
+                class="create--pfp"
+                src="../assets/default-avatar-icon-of-social-media-user-vector.jpg"
+                alt=""
+              />
+              <input
+                placeholder="what's on your mind?"
+                class="create__post--input"
+                type="text"
+              />
+              <button class="profile__post--button">Post</button>
+              <div class="post--interactions">
+                <ul class="interactions">
+                  <li class="live center interaction">LIVE</li>
+                  <li class="interaction"><img class="interaction--img" src="../assets/picture_image_icon.png" alt=""> Media</li>
+                  <li class="interaction"><img class="interaction--img" src="../assets/star_png_icon.png" alt="">Feeling</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div></div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+.profile--container {
+   width: 70%;
+   height: 80%;
+   background-color: white;
+   border-radius: 8px;
+   margin-top: 110px;  
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.banner {
+    background-image: url(../assets/tumblr_036e18dc073e60ace31661a6ef9d9454_a240d68b_640.jpg);
+    width: 100%;
+    height: 40%;
+    padding: 8px;
+    background-size: cover;
+    background-position-y: 50% ;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    
+}
+
+.profile--pfp {
+    width: 136px;
+    height: 136px;
+    border-radius: 999px;
+    border: white solid 4px;
+    position: relative;
+    top: 180px;
+    left: 0;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.profile--name {
+    position: relative;
+    bottom: -65px;
+    padding: 8px;
+    margin-left: 32px;
+}
+
+.profile--links {
+    display: flex;
+    justify-content: end;
+    gap: 64px;
+    padding-right: 24px;
+}
+
+.profile--link {
+    cursor: pointer;
+}
+
+.profile--link:hover {
+    border-bottom: solid 2px black;
+    
+    
+}
+
+.post--wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.create--pfp {
+    width: 56px;
+    border-radius: 999px;
+}
+
+.create__post--input {
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background-color: white;
+    height: 40px;
+    padding: 8px;
+}
+
+.create--post {
+    background-color: #f0f2f5;
+    width: 40%;
+    height: 130px;
+    margin-top: 64px;
+    border-radius: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+
+.profile__post--button {
+    background-color: cornflowerblue;
+    color: white;
+    border-radius:8px ;
+    padding: 4px;
+    width: 48px;
+    height: 32px;
+    margin-left: 16px;
+}
+
+.interactions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    border-top: 1px solid ;
+    margin-top: 12px;
+}
+
+.interaction--img {
+    width: 40px;
+}
+
+.interaction {
+    padding: 8px;
+}
+
